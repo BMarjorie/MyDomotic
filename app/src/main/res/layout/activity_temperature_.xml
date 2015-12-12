@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.utilisateur.mydomotic.Temperature_Activity">
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="130px"
+        android:layout_height="80px"
+        android:text="Retour"
+        android:id="@+id/retour"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="return_t"
+        android:textColor="#fcfdfe"
+        android:background="#4a063a" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+        android:text="Capteur de température"
+        android:id="@+id/textView2"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Widget.ActionBar.Title"
+        android:text="La température est de : "
+        android:id="@+id/tempe"
+        android:singleLine="true"
+        android:textAlignment="center"
+        android:textColor="#1c5945"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Température souhaitée :"
+        android:textAlignment="center"
+        android:id="@+id/textView5"
+        android:singleLine="true"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="#1c5945"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Widget.ActionBar.Title" />
+
+    <EditText
+        android:layout_width="100px"
+        android:layout_height="wrap_content"
+        android:inputType="numberSigned"
+        android:ems="10"
+        android:id="@+id/Temp_souhaite"
+        android:layout_alignBottom="@+id/button"
+        android:layout_alignLeft="@+id/textView5"
+        android:layout_alignStart="@+id/textView5"
+        />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OK"
+        android:id="@+id/button"
+        android:background="#1c5945"
+        android:layout_below="@+id/textView5"
+        android:layout_toLeftOf="@+id/retour"
+        android:layout_toStartOf="@+id/retour"
+        android:layout_marginTop="36dp"
+        android:textColor="#f2f6fa" />
+
+    <TextView
+        android:layout_width="50px"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:text="°C"
+        android:id="@+id/degres"
+        android:layout_alignTop="@+id/Temp_souhaite"
+        android:layout_alignBottom="@+id/button"
+        android:layout_toRightOf="@+id/Temp_souhaite"
+        android:textColor="#000000"
+        android:layout_alignRight="@+id/textView2"
+        android:layout_alignEnd="@+id/textView2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Widget.ActionBar.Title"
+        android:text="Le pourcentage d&apos;humidité est de : "
+        android:id="@+id/humidité"
+        android:textColor="#1c5945"
+        android:layout_below="@+id/tempe"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="60dp" />
+
+</RelativeLayout>

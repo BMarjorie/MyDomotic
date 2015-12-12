@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.utilisateur.mydomotic.Alarme_Activity">
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="130px"
+        android:layout_height="80px"
+        android:text="Retour"
+        android:id="@+id/retour"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="return_t"
+        android:textColor="#fcfdfe"
+        android:background="#4a063a" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enregistrer une video de surveillance"
+        android:id="@+id/video"
+        android:checked="false"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+        android:text="Activation de l&apos;alarme"
+        android:id="@+id/textView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="200px"
+        android:layout_height="150px"
+        android:id="@+id/alarme_rouge"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="45dp" />
+
+    <VideoView
+        android:layout_width="200px"
+        android:layout_height="180px"
+        android:id="@+id/videoView"
+        android:layout_above="@+id/retour"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/video"
+        android:layout_alignEnd="@+id/video" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/switch_alarme"
+        android:thumb="@drawable/apptheme_switch_inner_holo_light"
+        android:track="@drawable/apptheme_switch_track_holo_light"
+        android:textOff="OFF"
+        android:textOn="ON"
+        android:checked="false"
+        android:layout_alignTop="@+id/alarme_rouge"
+        android:layout_alignRight="@+id/video"
+        android:layout_alignEnd="@+id/video"
+        android:layout_alignBottom="@+id/alarme_rouge" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Widget.PopupMenu.Small"
+        android:text="Visionnage de la vidéo de surveillance"
+        android:id="@+id/textView6"
+        android:textColor="#000000"
+        android:textIsSelectable="true"
+        android:layout_above="@+id/videoView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="20dp" />
+
+</RelativeLayout>
